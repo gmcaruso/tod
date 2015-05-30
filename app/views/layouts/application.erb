@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%=t('title')%></title>
+    <%= stylesheet_link_tag '/assets/application' %>
+    <%= favicon_tag 'favicon.ico' %>
+  </head>
+  <body>
+    <div class="container">
+
+      <%= render_partial 'partials/nav' %>
+
+      <div class="container">
+        <div>
+          <%= [:danger, :warning, :success, :info].map {
+            |type| flash_tag(
+              type, :class => "alert alert-#{type} fade in", :bootstrap => true
+            )}.join.html_safe
+          %>
+        </div>
+
+        <%= yield %>
+
+      </div>
+
+      <%= render_partial 'partials/footer' %>
+
+    </div>
+
+    <%= javascript_include_tag '/assets/application' %>
+  </body>
+</html>
