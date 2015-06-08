@@ -48,4 +48,3 @@ Scenario: Evento con nivel de audiencia distinto a los recomendados
   And seteo el cupo en "20"
   And seteo el nivel de audiencia en "Pepepompin"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado""
