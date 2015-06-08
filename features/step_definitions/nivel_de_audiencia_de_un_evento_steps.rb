@@ -22,8 +22,8 @@ Given(/^cliqueo en el boton "(.*?)"$/) do |boton|
   click_button('boton')
 end
 
-Given(/^cambio el nivel de audiencia del evento a "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^cambio el nivel de audiencia del evento a "(.*?)"$/) do |nivel|
+  fill_in('Nivel de audiencia', :with => nivel)
 end
 
 Then(/^se debe ver el mensaje "(.*?)"$/) do |arg1|
