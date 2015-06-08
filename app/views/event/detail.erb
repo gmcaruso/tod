@@ -1,0 +1,35 @@
+<div class="container">
+  <div class = "media">
+      <div class="media-body">
+        <h2 class="media-heading">
+          <%=@event_detail.title%>
+        </h2><hr>
+        <p><%=@event_detail.description%></p>
+        <small>
+          <%=t('event.detail.send_by', author: @event_detail.author)%>
+        </small>
+        <small>
+          <%=t('event.detail.tags', tags: @event_detail.tag_list * " ")%>
+        </small>
+      </div>
+    </div>
+
+  <hr>
+
+  <% end %>
+  </div>
+
+  <hr>
+  <% for @comment in @comments %>
+    <div class = "media">
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%=@comment.author%>
+          <small><%=@comment.date.strftime('%c')%></small>
+        </h4>
+        <%=@comment.body%>
+      </div>
+    </div>
+  <% end %>
+
+</div>

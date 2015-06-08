@@ -1,0 +1,24 @@
+<div class="container">
+  <h1><%= t('event.list.title')%></h1>
+
+  <% if @events.empty? then %>
+    <tr><%= t('event.list.empty')%></tr>
+  <% else %>
+    <table class="table table-bordered">
+
+      <tr>
+        <th><%= t('event.list.table.amount_of_people')%></th>
+        <th><%= t('event.list.table.audience_level')%></th>
+      </tr>
+
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.amount_of_people %></td>
+          <td><%= event.audience_level %></td>
+        </tr>
+      <% end %>
+
+    </table>
+  <% end %>
+
+</div>

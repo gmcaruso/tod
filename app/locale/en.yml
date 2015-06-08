@@ -3,7 +3,9 @@ en:
   nav:
     home_link:          Home
     new_proposal:       New Proposal
+    new_event:          New Event
     proposal_list:      Proposal list
+    event_list:         Event list
     search_placeholder: Looking for something?
     search_button:      Search
   footer:
@@ -57,3 +59,9 @@ en:
     search:
       title: Search results
       empty: Results have not been found
+  event:
+    new:
+      title: New Event
+      form:
+        amount_of_people:       Ammount of people
+        audience_level:         Audience level

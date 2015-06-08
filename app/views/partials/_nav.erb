@@ -11,7 +11,13 @@
         <li><%= link_to t('nav.new_proposal'), url_for(:proposal, :new) %></li>
       </ul>
       <ul class="nav navbar-nav">
+        <li><%= link_to t('nav.new_event'), url_for(:event, :new) %></li>
+      </ul>
+      <ul class="nav navbar-nav">
         <li><%= link_to t('nav.proposal_list'), url_for(:proposal, :list) %></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><%= link_to t('nav.event_list'), url_for(:event, :list) %></li>
       </ul>
 
       <% @user = session[:user] %>

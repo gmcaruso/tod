@@ -1,0 +1,45 @@
+<div class="container">
+<h1><%=t('event.new.title')%></h1>
+
+  <% form_for(@event, '/event/create', html: { class: 'form' }) do |f| %>
+    <fieldset>
+      <div class="form-group">
+        <%= f.label t('event.new.form.amount_of_people'),
+          class: 'control-label'
+        %>
+        <div class="controls">
+          <%= f.text_field :amount_of_people, class: 'form-control',
+            placeholder: t('event.new.form.place_holder_amount_of_people'),
+            autofocus: 'true',
+            id: 'amount_of_people'
+
+          %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label t('event.new.form.audience_level'),
+          class: 'control-label'
+        %>
+        <div class="controls">
+          <%= f.text_field :audience_level, class: 'form-control',
+            placeholder: t('event.new.form.place_holder_audience_level'),
+            autofocus: 'true',
+            id: 'audience_level'
+          %>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit t('event.new.form.new_button'),
+          class: 'btn btn-primary'
+        %>
+        <%= link_to t('event.new.form.cancel_button'),
+          url(:event, :new),
+          :class => "btn btn-default"
+        %>
+      </div>
+
+  <% end %>
+
+</div>
