@@ -5,7 +5,7 @@ Given(/^un Evento creado$/) do
   step 'veo el titulo "Nuevo Evento"'
   step 'seteo el cupo en "0"'
   step 'seteo el nivel de audiencia en "Inicial"'
-  step 'cliqueo en el boton "Nuevo"'
+  step 'cliqueo en el link "Nuevo"'
   step 'se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"'
 end
 

@@ -7,5 +7,5 @@ Then(/^seteo el cupo en "(.*?)"$/) do |cupo|
 end
 
 Then(/^seteo el nivel de audiencia en "(.*?)"$/) do |nivel|
-  pending
+  fill_in('audience_level', :with => nivel)
 end

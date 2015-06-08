@@ -7,7 +7,7 @@ Scenario: Evento nuevo
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el boton "Nuevo"
+  And cliqueo en el link "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
 
 Scenario: Evento con cupo superando el limite maximo
@@ -17,7 +17,7 @@ Scenario: Evento con cupo superando el limite maximo
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "30000"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el boton "Nuevo"
+  And cliqueo en el link "Nuevo"
   Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
 
 Scenario: Evento con cupo superando el limite minimo
@@ -27,7 +27,7 @@ Scenario: Evento con cupo superando el limite minimo
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "-1"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el boton "Nuevo"
+  And cliqueo en el link "Nuevo"
   Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
 
 Scenario: Evento con cupo nulo
@@ -37,7 +37,7 @@ Scenario: Evento con cupo nulo
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "0"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el boton "Nuevo"
+  And cliqueo en el link "Nuevo"
   Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
 
 Scenario: Evento con nivel de audiencia distinto a los recomendados
@@ -47,4 +47,4 @@ Scenario: Evento con nivel de audiencia distinto a los recomendados
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "20"
   And seteo el nivel de audiencia en "Pepepompin"
-  And cliqueo en el boton "Nuevo"
+  And cliqueo en el link "Nuevo"
