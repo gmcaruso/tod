@@ -2,8 +2,8 @@ Feature: Crear un evento
 
 Scenario: Evento nuevo
 
-  Given voy a la vista "Home"
-  And cliqueo en el boton "Nuevo Evento"
+  Given voy a la vista "HOME"
+  And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
@@ -12,8 +12,8 @@ Scenario: Evento nuevo
 
 Scenario: Evento con cupo superando el limite maximo
 
-  Given voy a la vista "Home"
-  And cliqueo en el boton "Nuevo Evento"
+  Given voy a la vista "HOME"
+  And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "30000"
   And seteo el nivel de audiencia en "Inicial"
@@ -22,8 +22,8 @@ Scenario: Evento con cupo superando el limite maximo
 
 Scenario: Evento con cupo superando el limite minimo
 
-  Given voy a la vista "Home"
-  And cliqueo en el boton "Nuevo Evento"
+  Given voy a la vista "HOME"
+  And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "-1"
   And seteo el nivel de audiencia en "Inicial"
@@ -32,8 +32,8 @@ Scenario: Evento con cupo superando el limite minimo
 
 Scenario: Evento con cupo nulo
 
-  Given voy a la vista "Home"
-  And cliqueo en el boton "Nuevo Evento"
+  Given voy a la vista "HOME"
+  And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "0"
   And seteo el nivel de audiencia en "Inicial"
@@ -42,8 +42,8 @@ Scenario: Evento con cupo nulo
 
 Scenario: Evento con nivel de audiencia distinto a los recomendados
 
-  Given voy a la vista "Home"
-  And cliqueo en el boton "Nuevo Evento"
+  Given voy a la vista "HOME"
+  And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "20"
   And seteo el nivel de audiencia en "Pepepompin"
