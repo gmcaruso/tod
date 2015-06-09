@@ -19,8 +19,9 @@
           <td>
             <div class="form-actions">
               <%= link_to t('event.list.table.td.modify'),
-                url(:event, :modify_event),
-                :class => "btn btn-default"
+                url_for(:event, :modify_event, :event_id => event.id),
+                :id => "modify_btn",
+                :class => "btn btn-success"
               %>
             </div>
           </td>

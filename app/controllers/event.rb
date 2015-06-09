@@ -43,20 +43,32 @@ Tod::App.controllers :event do
     render 'event/list'
   end
 
-  get :modify_event do
-    render 'event/modify'
+  get :modify_event, :with =>:event_id  do
+    @event = Event.get(params[:event_id])
+    render 'event/edit'
   end
 
-  post :save_changes do
+  post :update, :with => :event_id do
+    
     amount_of_people= params[:event][:amount_of_people]
     audience_level= params[:event][:audience_level]
-    @event= Event.getId(:event_id)
-    @event.amount_of_people= amount_of_people
-    @event.audience_level= audience_level
+    if (audience_level == "Inicial" || audience_level == "Practicante" || audience_level == "Avanzado")
+      if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= 10000) #No hardcodear los valores maximos y minimos
+        @event = Event.get(params[:event_id])
+        @event.update(params[:event])
+        if @event.save
+          flash[:success] = t('event.new.edit')
+          redirect '/event/list'
+        end
+
+      else
+        flash[:danger] = t('event.detail.error.amount_of_people')
+        redirect 'event/list'
+      end
+    else
+      flash[:danger] = t('event.detail.error.audience_level')
       redirect 'event/list'
+    end
   end
-
-
-
 
 end
