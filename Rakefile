@@ -12,9 +12,11 @@ if ['development', 'test'].include?(RACK_ENV)
   require 'bundler/setup'
   require 'rspec/core/rake_task'
   require 'cucumber/rake/task'
+  Cucumber::Rake::Task.new(:cucumber) do |task|
+    task.cucumber_opts = ["features", "--tags ~@wip"]
+  end
 
   RSpec::Core::RakeTask.new
-  Cucumber::Rake::Task.new
 
   task :default => [:spec, :cucumber]
 

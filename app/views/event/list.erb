@@ -9,12 +9,21 @@
       <tr>
         <th><%= t('event.list.table.amount_of_people')%></th>
         <th><%= t('event.list.table.audience_level')%></th>
+        <th><%= t('event.list.table.modify')%></th>
       </tr>
 
       <% @events.each do |event| %>
         <tr>
           <td><%= event.amount_of_people %></td>
           <td><%= event.audience_level %></td>
+          <td>
+            <div class="form-actions">
+              <%= link_to t('event.list.table.td.modify'),
+                url(:event, :modify_event),
+                :class => "btn btn-default"
+              %>
+            </div>
+          </td>
         </tr>
       <% end %>
 

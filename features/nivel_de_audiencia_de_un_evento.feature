@@ -3,6 +3,7 @@ Feature: Indicar el nivel de audiencia de un evento
 Background:
   Given un Evento creado
 
+
 Scenario: Setear nivel de audiencia
 
   Given voy a la vista "HOME"

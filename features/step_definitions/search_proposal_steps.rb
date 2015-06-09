@@ -26,4 +26,3 @@ Then(/^result should be proposal with title "(.*?)"$/) do |title|
   expect(page).to have_content(title)
   expect(page).not_to have_content("No se han encontrado resultados")
 end
-

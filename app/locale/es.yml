@@ -5,7 +5,7 @@ es:
     new_proposal:       Nueva Propuesta
     new_event:          Nuevo Evento
     proposal_list:      Lista de propuestas
-    event_list:         Lista de eventos
+    event_list:         Lista de Eventos
     search_placeholder: Búsqueda
     search_button:      Buscar
   footer:
@@ -76,10 +76,12 @@ es:
       table:
         amount_of_people:  Cupo
         audience_level:    Nivel de audiencia
+        modify:            Modificar
       empty: "Aun no hay eventos, puedes agregar una si deseas"
+      td:
+        modify: Modificar
     detail:
-      error: 
+      error:
         audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado"'
         amount_of_people:       El Cupo debe ser un valor numérico contenido entre 1 y 10000
         amount_of_people_type:  Cupo debe ser un valor numérico entero
-

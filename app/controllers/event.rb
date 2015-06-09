@@ -1,7 +1,7 @@
 require 'iconv'
 
 Tod::App.controllers :event do
-  
+
   get :new do
     @event = Event.new
     render 'event/new'
@@ -16,7 +16,7 @@ Tod::App.controllers :event do
         @event= Event.new
         @event.amount_of_people= amount_of_people
         @event.audience_level= audience_level
-      
+
         if @event.save
           flash[:success] = t('event.new.result.success')
           redirect 'event/list'
@@ -43,10 +43,9 @@ Tod::App.controllers :event do
     render 'event/list'
   end
 
-  get :modify do
+  get :modify_event do
     render 'event/modify'
   end
 
-  
-end
 
+end

@@ -1,12 +1,9 @@
 # encoding: UTF-8
 Given(/^un Evento creado$/) do
-  step 'voy a la vista "HOME"'
-  step 'cliqueo en el link "Nuevo Evento"'
-  step 'veo el titulo "Nuevo Evento"'
-  step 'seteo el cupo en "0"'
-  step 'seteo el nivel de audiencia en "Inicial"'
-  step 'cliqueo en el link "Nuevo"'
-  step 'se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"'
+  @event = Event.new
+  @event.amount_of_people = 50
+  @event.audience_level = "Inicial"
+  @event.save
 end
 
 Given(/^voy a la vista "(.*?)"$/) do |pagina|
@@ -17,16 +14,17 @@ Given(/^cliqueo en el link "(.*?)"$/) do |link|
   click_link(link)
 end
 
-
 Given(/^cliqueo en el boton "(.*?)"$/) do |boton|
-  click_button('boton')
+  #click_link(boton)
+  pending
 end
 
+
 Given(/^cambio el nivel de audiencia del evento a "(.*?)"$/) do |nivel|
-  fill_in('Nivel de audiencia', :with => nivel)
+  #fill_in('Nivel de audiencia', :with => nivel)
+  pending
 end
 
 Then(/^se debe ver el mensaje "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
-
