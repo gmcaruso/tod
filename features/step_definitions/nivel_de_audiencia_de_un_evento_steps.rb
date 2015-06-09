@@ -16,7 +16,7 @@ end
 
 Given(/^cliqueo en el boton "(.*?)"$/) do |boton|
   #click_link(boton)
-  pending
+  click_link(boton, :match => :first)
 end
 
 

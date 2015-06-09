@@ -17,7 +17,7 @@ Tod::App.controllers :auth do
   end
 
   get :github do
-    redirect url("/")
+    #redirect url("/")
     redirect url("/auth/github")
   end
 

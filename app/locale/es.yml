@@ -76,10 +76,10 @@ es:
       table:
         amount_of_people:  Cupo
         audience_level:    Nivel de audiencia
-        modify:            Modificar
+        modify_event:            Datos
+        td:
+          modify: Modificar
       empty: "Aun no hay eventos, puedes agregar una si deseas"
-      td:
-        modify: Modificar
     detail:
       error:
         audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado"'
