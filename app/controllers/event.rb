@@ -47,5 +47,16 @@ Tod::App.controllers :event do
     render 'event/modify'
   end
 
+  post :save_changes do
+    amount_of_people= params[:event][:amount_of_people]
+    audience_level= params[:event][:audience_level]
+    @event= Event.getId(:event_id)
+    @event.amount_of_people= amount_of_people
+    @event.audience_level= audience_level
+      redirect 'event/list'
+  end
+
+
+
 
 end

@@ -1,16 +1,18 @@
 <div class="container">
 
-    <h2> Titulo de evento </h2>
-    <div class="bs-example">
-    <form class="form-inline" role="form">
-        <div class="form-group">
-            <label class="sr-only" for="inputCupo">Cupo</label>
-            <input type="text" class="form-control" id="inputCupo" placeholder="Cupo">
-            <input type="text" class="form-control" id="audience_level" placeholder="Nivel De Audiencia">
-        </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+  <h2> Titulo de evento </h2>
+  <div>
+  <form method="POST" action="save_changes">
 
-    </form>
-    </div>
+      <label class="sr-only" for="inputCupo">Cupo</label>
+      <input type="text" id="inputCupo" placeholder="Cupo">
+      <input type="text" id="audience_level" placeholder="Nivel De Audiencia">
+
+
+			<input type="submit"value="Guardar"/>
+
+
+  </form>
+  </div>
 
 </div>
