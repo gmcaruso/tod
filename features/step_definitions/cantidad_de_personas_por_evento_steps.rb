@@ -1,3 +1,3 @@
-Given(/^fijo la cantidad de personas del evento en "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^fijo la cantidad de personas del evento en "(.*?)"$/) do |cupo|
+  fill_in('event_amount_of_people', :with => cupo)
 end

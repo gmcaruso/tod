@@ -72,7 +72,10 @@ es:
         new_button:                     Nuevo
         save_button:                    Guardar
         cancel_button:                  Cancelar
-      edit:                             Evento editado
+      edit:
+        edit:                           Evento editado
+        audience_level:                 Nivel de audiencia
+        amount_of_people:               cupo
     list:
       title: Lista de Eventos
       table:
@@ -87,3 +90,6 @@ es:
         audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado"'
         amount_of_people:       El Cupo debe ser un valor numérico contenido entre 1 y 10000
         amount_of_people_type:  Cupo debe ser un valor numérico entero
+      succes:
+        audience_level:                 Nivel de audiencia modificado con exito
+        event:               Evento enviado correctamente

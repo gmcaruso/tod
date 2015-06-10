@@ -1,5 +1,5 @@
 <div class="container">
-<h1><%=t('event.new.edit')%></h1>
+<h1><%=t('event.new.edit.edit')%></h1>
 
 
 <% form_for(@event, "/event/update/#{@event.id}") do |f| %>
@@ -12,7 +12,5 @@
   <%= f.submit "Grabar", :class => "btn btn-primary" %>
   <%= link_to 'Cancelar', url_for(:event, :list), :class => "btn btn-secondary" %>
 <% end %>
-
-
 
 </div>

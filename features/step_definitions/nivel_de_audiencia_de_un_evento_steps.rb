@@ -15,10 +15,9 @@ Given(/^cliqueo en el link "(.*?)"$/) do |link|
 end
 
 Given(/^cliqueo en el boton "(.*?)"$/) do |boton|
-  #click_link(boton)
   click_link(boton, :match => :first)
 end
 
-Then(/^se debe ver el mensaje "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^se debe ver el mensaje "(.*?)"$/) do |mensaje|
+  expect(page.has_content?(mensaje))
 end

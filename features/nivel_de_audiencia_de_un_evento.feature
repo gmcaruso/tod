@@ -11,4 +11,4 @@ Scenario: Setear nivel de audiencia
   And cliqueo en el boton "Modificar"
   And modifico el nivel de audiencia en "Inicial"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "Nivel del audiencia modificado con exito"
+  Then se debe ver el mensaje "Nivel de audiencia modificado con exito"

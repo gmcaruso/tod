@@ -1,6 +1,10 @@
 require 'iconv'
 
 Tod::App.controllers :event do
+  register Padrino::Rendering
+      register Padrino::Helpers
+
+      enable :sessions
 
   get :new do
     @event = Event.new
@@ -8,6 +12,8 @@ Tod::App.controllers :event do
   end
 
   post :create do
+    @audiencia = session[:audiencia]
+    @cupo = session[:cupo]
     amount_of_people= params[:event][:amount_of_people]
     audience_level= params[:event][:audience_level]
 
@@ -18,17 +24,17 @@ Tod::App.controllers :event do
         @event.audience_level= audience_level
 
         if @event.save
-          flash[:success] = t('event.new.result.success')
+          session[:audiencia] = ('event.new.result.success')
           redirect 'event/list'
         end
 
       else
-        flash[:danger] = t('event.detail.error.amount_of_people')
-        redirect 'event/new'
+        session[:cupo] = t('event.detail.error.amount_of_people')
+        redirect 'event/list'
       end
     else
-      flash[:danger] = t('event.detail.error.audience_level')
-      redirect 'event/new'
+      session[:audiencia] = t('event.detail.error.audience_level')
+      redirect 'event/list'
     end
   end
 
@@ -39,36 +45,48 @@ Tod::App.controllers :event do
   end
 
   get :list do
+    #session[:audiencia] = nil
     @events = Event.reverse
     render 'event/list'
   end
 
   get :modify_event, :with =>:event_id  do
+    session[:audiencia] = nil
+    session[:cupo] = nil
     @event = Event.get(params[:event_id])
     render 'event/edit'
   end
 
   post :update, :with => :event_id do
-    
+    @audiencia = session[:audiencia]
+    @cupo = session[:cupo]
     amount_of_people= params[:event][:amount_of_people]
     audience_level= params[:event][:audience_level]
     if (audience_level == "Inicial" || audience_level == "Practicante" || audience_level == "Avanzado")
-      if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= 10000) #No hardcodear los valores maximos y minimos
-        @event = Event.get(params[:event_id])
-        @event.update(params[:event])
-        if @event.save
-          flash[:success] = t('event.new.edit')
-          redirect '/event/list'
-        end
-
-      else
-        flash[:danger] = t('event.detail.error.amount_of_people')
-        redirect 'event/list'
-      end
+      @audiencia = t('event.detail.succes.audience_level')
+      session[:audiencia] = @audiencia
     else
-      flash[:danger] = t('event.detail.error.audience_level')
+      @audiencia = t('event.detail.error.audience_level')
+      session[:audiencia] = @audiencia
       redirect 'event/list'
     end
+    if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= 10000) #No hardcodear los valores maximos y minimos
+      @cupo = t('event.detail.succes.event')
+      session[:cupo] = @cupo
+    elsif (amount_of_people.to_i.to_s != amount_of_people)
+      @cupo = t('event.detail.error.amount_of_people_type')
+      session[:cupo] = @cupo
+      redirect 'event/list'
+    else
+      @cupo = t('event.detail.error.amount_of_people')
+      session[:cupo] = @cupo
+      redirect 'event/list'
+    end
+    @event = Event.get(params[:event_id])
+    @event.update(params[:event])
+    @event.save
+    redirect 'event/list'
   end
+
 
 end
