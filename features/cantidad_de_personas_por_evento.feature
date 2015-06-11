@@ -10,7 +10,7 @@ Scenario: Limitar cantidad de personas exitosa
   And cliqueo en el boton "Modificar"
   And fijo la cantidad de personas del evento en "20"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "Evento enviado correctamente"
+  Then se debe ver el mensaje "Evento creado correctamente"
 
 
 Scenario: Limitar cantidad de personas por debajo del minimo cupo por evento
@@ -46,4 +46,4 @@ Scenario: Limitar cantidad de personas con un valor no numérico
   And cliqueo en el boton "Modificar"
   And fijo la cantidad de personas del evento en "qwe"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "Cupo debe ser un valor numérico entero"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"

@@ -76,20 +76,20 @@ es:
         edit:                           Evento editado
         audience_level:                 Nivel de audiencia
         amount_of_people:               cupo
+        success:                        Evento modificado correctamente
     list:
-      title: Lista de Eventos
+      title:                    Lista de Eventos
       table:
         amount_of_people:         Cupo
         audience_level:           Nivel de audiencia
         modify_event:             Datos
         td:
-          modify: Modificar
-      empty: "Aun no hay eventos, puedes agregar una si deseas"
+          modify:                 Modificar
+      empty:                      "Aun no hay eventos, puedes agregar uno si deseas"
     detail:
       error:
-        audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado"'
+        audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado" (respetando mayúsculas)'
         amount_of_people:       El Cupo debe ser un valor numérico contenido entre 1 y 10000
-        amount_of_people_type:  Cupo debe ser un valor numérico entero
       succes:
-        audience_level:                 Nivel de audiencia modificado con exito
-        event:               Evento enviado correctamente
+        audience_level:         Nivel de audiencia modificado con exito
+        event:                  Evento enviado correctamente

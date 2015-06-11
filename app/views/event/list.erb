@@ -1,7 +1,6 @@
 <div class="container">
   <h1><%= t('event.list.title')%></h1>
-    <h3><%= session[:audiencia]%></h3>
-    <h3><%= session[:cupo]%></h3>
+  <p><%= flash[:success] %></p>
 
   <% if @events.empty? then %>
     <tr><%= t('event.list.empty')%></tr>
