@@ -25,4 +25,9 @@ Tod::App.controllers :auth do
     session[:user] = nil
     redirect url("/")
   end
+
+  get :create_user do
+    render '/user/create'
+  end
+
 end

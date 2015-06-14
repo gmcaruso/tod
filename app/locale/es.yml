@@ -17,6 +17,7 @@ es:
     log_in:  Iniciar sesión con GitHub
     log_out: Cerrar sesión
     logged:  Conectado como
+    create_user: Crear usuario
   proposal:
     new:
       title: Nueva Propuesta
