@@ -28,15 +28,13 @@
       </div>
 
       <div class="form-group">
-        <%= f.label t('user.new.form.password'),
+        <%= f.label t('user.new.form.role.administrator'),
           class: 'control-label'
         %>
-        <div class="controls">
           <%= f.check_box :role, class: 'form-control',
             autofocus: 'true',
             id: 'role'
           %>
-        </div>
       </div>
 
       <div class="form-actions">

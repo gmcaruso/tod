@@ -20,9 +20,11 @@ es:
     create_user:        Crear usuario
     new:
       form:
-        user:           Usuario
-        password:       Password
-        rol:            Rol
+        user:             Usuario
+        password:         Password
+        role:            
+          role:           Rol
+          administrator:  Administrador
   proposal:
     new:
       title: Nueva Propuesta
