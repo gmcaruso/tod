@@ -11,7 +11,7 @@ Given(/^seteo el password en "(.*?)"$/) do |password|
 end
 
 Given(/^seteo el rol en "(.*?)"$/) do |rol|
-  check(rol)
+  pending #check(rol)
 end
 
 Then(/^se debe ver el usuario "(.*?)" y su perfil "(.*?)" en la pantalla$/) do |arg1, arg2|
