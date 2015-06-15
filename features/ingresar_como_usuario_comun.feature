@@ -1,7 +1,7 @@
 Feature: Ingresar como usuario comun
 
 Background:
-  Given voy a la vista "CREATE_USER"
+  Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario2"
   And seteo el password en "usuario.2"
   And seteo el rol en "Usuario"
