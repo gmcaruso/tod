@@ -3,6 +3,7 @@ module Tod
     register Padrino::Mailer
     register Padrino::Helpers
     register Padrino::Sprockets
+    
     sprockets :minify => (Padrino.env == :production)
 
     enable :sessions

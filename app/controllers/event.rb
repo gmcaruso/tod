@@ -49,8 +49,6 @@ Tod::App.controllers :event do
   end
 
   get :modify_event, :with =>:event_id  do
-    # session[:audiencia] = nil
-    # session[:cupo] = nil
     @event = Event.get(params[:event_id])
     render 'event/edit'
   end

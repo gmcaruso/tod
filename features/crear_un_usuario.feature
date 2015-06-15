@@ -1,7 +1,7 @@
 Feature: Crear un usuario
 
 Scenario: Crear un usuario administrador
-  Given voy a la vista "CREATE_USER"
+  Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario"
   And seteo el password en "usuario.0"
   And seteo el rol en "Administrador"

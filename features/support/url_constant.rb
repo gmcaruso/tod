@@ -1,2 +1,2 @@
 HOME = '/'
-CREATE_USER = 'auth/create_user'
+CREATE_USER = '/user/new'

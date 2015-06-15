@@ -1,0 +1,57 @@
+<div class="container">
+<h1><%=t('user.create_user')%></h1>
+
+  <% form_for(@user, '/user/create', html: { class: 'form' }) do |f| %>
+    <fieldset>
+      <div class="form-group">
+        <%= f.label t('user.new.form.user'),
+          class: 'control-label'
+        %>
+        <div class="controls">
+          <%= f.text_field :user, class: 'form-control',
+            autofocus: 'true',
+            id: 'user'
+          %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label t('user.new.form.password'),
+          class: 'control-label'
+        %>
+        <div class="controls">
+          <%= f.password_field :password, class: 'form-control',
+            autofocus: 'true',
+            id: 'password'
+          %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label t('user.new.form.password'),
+          class: 'control-label'
+        %>
+        <div class="controls">
+          <%= f.check_box :role, class: 'form-control',
+            autofocus: 'true',
+            id: 'role'
+          %>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit t('event.new.form.new_button'),
+          class: 'btn btn-primary'
+        %>
+        <%= link_to t('event.new.form.cancel_button'),
+          url(:event, :new),
+          :class => "btn btn-default"
+        %>
+      </div>
+
+  <% end %>
+
+</div>
+
+
+<!-- padrino g model user name:string email:string -a app -->

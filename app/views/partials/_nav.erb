@@ -33,7 +33,7 @@
           <li><%= link_to t('user.log_in'), url_for(:auth, :github) %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('user.create_user'), url_for(:auth, :create_user) %></li>
+          <li><%= link_to t('user.create_user'), url_for(:user, :new) %></li>
         </ul>
       <% end %>
 

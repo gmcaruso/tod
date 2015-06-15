@@ -1,5 +1,9 @@
-Given(/^seteo el usuario en "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^voy a la vista CREATE_USER$/) do
+  visit '/user/new'
+end
+
+Given(/^seteo el usuario en "(.*?)"$/) do |usuario|
+  fill_in('user', :with => usuario)
 end
 
 Given(/^seteo el password en "(.*?)"$/) do |arg1|

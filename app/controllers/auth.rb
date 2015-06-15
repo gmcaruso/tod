@@ -26,8 +26,4 @@ Tod::App.controllers :auth do
     redirect url("/")
   end
 
-  get :create_user do
-    render '/user/create'
-  end
-
 end
