@@ -18,6 +18,8 @@ Tod::App.controllers :user do
       @user.role= role
       @user.save
 
+      flash[:success] = t('user.new.result.success')
+
       redirect '/'
   end
 

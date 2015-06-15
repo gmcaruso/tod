@@ -10,9 +10,14 @@ Given(/^seteo el password en "(.*?)"$/) do |password|
   fill_in('password', :with => password)
 end
 
-Given(/^seteo el rol en "(.*?)"$/) do |rol|
-  pending #check(rol)
+Given(/^seteo el rol en Administrador$/) do
+  check('role')
 end
+
+Given(/^voy a la vista LOG IN$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 
 Then(/^se debe ver el usuario "(.*?)" y su perfil "(.*?)" en la pantalla$/) do |arg1, arg2|
   pending # express the regexp above with the code you wish you had

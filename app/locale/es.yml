@@ -25,6 +25,8 @@ es:
         role:            
           role:           Rol
           administrator:  Administrador
+      result:
+        success:          Usuario creado correctamente
   proposal:
     new:
       title: Nueva Propuesta
