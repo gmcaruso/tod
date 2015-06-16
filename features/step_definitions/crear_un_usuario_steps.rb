@@ -16,9 +16,11 @@ end
 
 Given(/^voy a la vista LOG IN$/) do
   visit '/login'
-  
 end
 
+Given(/^cliqueo en el boton Log in$/) do
+  click_button('Log in')
+end
 
 Then(/^se debe ver el usuario "(.*?)" y su perfil "(.*?)" en la pantalla$/) do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
