@@ -14,6 +14,11 @@ Given(/^seteo el rol en Administrador$/) do
   check('role')
 end
 
+Given(/^seteo el rol en Usuario$/) do
+  uncheck('role')
+end
+
+
 Given(/^voy a la vista LOG IN$/) do
   visit '/login'
 end
