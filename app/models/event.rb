@@ -9,4 +9,5 @@ class Event
   property :id,               Serial
   property :amount_of_people, Integer, required: true
   property :audience_level,   String,    required: true
+  property :max_amount_of_people, Integer
 end

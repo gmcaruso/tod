@@ -29,6 +29,19 @@
         </div>
       </div>
 
+       <div class="form-group">
+        <%= f.label t('event.new.form.max_amount_of_people'),
+          class: 'control-label'
+        %>
+        <div class="controls">
+          <%= f.text_field :max_amount_of_people, class: 'form-control',
+            placeholder: t('event.new.form.place_holder_amount_of_people'),
+            autofocus: 'true',
+            id: 'max_amount_of_people'
+          %>
+        </div>
+      </div>
+
       <div class="form-actions">
         <%= f.submit t('event.new.form.new_button'),
           class: 'btn btn-primary'

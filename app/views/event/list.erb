@@ -10,6 +10,7 @@
       <tr>
         <th><%= t('event.list.table.amount_of_people')%></th>
         <th><%= t('event.list.table.audience_level')%></th>
+        <th><%= t('event.list.table.max_amount_of_people')%></th>
         <th><%= t('event.list.table.modify_event')%></th>
       </tr>
 
@@ -17,6 +18,7 @@
         <tr>
           <td><%= event.amount_of_people %></td>
           <td><%= event.audience_level %></td>
+          <td><%= event.max_amount_of_people %></td>
           <td>
             <div class="form-actions">
               <%= link_to t('event.list.table.td.modify'),

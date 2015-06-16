@@ -13,20 +13,27 @@ Tod::App.controllers :event do
   end
 
   post :create do
+    
     amount_of_people= params[:event][:amount_of_people]
     audience_level= params[:event][:audience_level]
-
+    max_amount_of_people= params[:event][:max_amount_of_people]
+       
     if (audience_level == "Inicial" || audience_level == "Practicante" || audience_level == "Avanzado")
-      if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= 10000) #No hardcodear los valores maximos y minimos
-        @event= Event.new
-        @event.amount_of_people= amount_of_people
-        @event.audience_level= audience_level
+      if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= max_amount_of_people.to_i) #No hardcodear los valores maximos y minimos
+        if(max_amount_of_people.to_i <= 10000)
+          @event= Event.new
+          @event.amount_of_people= amount_of_people
+          @event.audience_level= audience_level
+          @event.max_amount_of_people= max_amount_of_people
       
-        if @event.save
-          flash[:success] = t('event.new.result.success')
-          redirect 'event/list'
-        end
-
+          if @event.save
+            flash[:success] = t('event.new.result.success')
+            redirect 'event/list'
+          end
+        else
+          flash[:danger] = t('event.detail.error.max_amount_of_people')
+          redirect 'event/new'
+        end      
       else
         flash[:danger] = t('event.detail.error.amount_of_people')
         redirect 'event/new'
@@ -35,6 +42,7 @@ Tod::App.controllers :event do
       flash[:danger] = t('event.detail.error.audience_level')
       redirect 'event/new'
     end
+    
   end
 
   get :detail do
@@ -56,9 +64,12 @@ Tod::App.controllers :event do
   post :update, :with => :event_id do
     amount_of_people= params[:event][:amount_of_people]
     audience_level= params[:event][:audience_level]
+    max_amount_of_people = params[:event][:max_amount_of_people]
     if (audience_level == "Inicial" || audience_level == "Practicante" || audience_level == "Avanzado") #No hardcodear los valores maximos y minimos
-      if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= 10000)
+      if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= max_amount_of_people.to_i)
+       
           flash[:success] = t('event.new.edit.success')
+       
       else
         flash[:danger] = t('event.detail.error.amount_of_people')
         redirect 'event/list'

@@ -82,6 +82,7 @@ es:
         place_holder_amount_of_people:  Cupo debe ser un valor numérico contenido entre 1 y 10000
         audience_level:                 Nivel de audiencia
         place_holder_audience_level:    "Los niveles de audiencia son: Inicial, Practicante y Avanzado"
+        max_amount_of_people:           Cupo maximo
         new_button:                     Nuevo
         save_button:                    Guardar
         cancel_button:                  Cancelar
@@ -89,12 +90,14 @@ es:
         edit:                           Evento editado
         audience_level:                 Nivel de audiencia
         amount_of_people:               cupo
+        max_amount_of_people:           Cupo maximo
         success:                        Evento modificado correctamente
     list:
       title:                    Lista de Eventos
       table:
         amount_of_people:         Cupo
         audience_level:           Nivel de audiencia
+        max_amount_of_people:     Cupo maximo  
         modify_event:             Datos
         td:
           modify:                 Modificar
@@ -103,6 +106,7 @@ es:
       error:
         audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado" (respetando mayúsculas)'
         amount_of_people:       El Cupo debe ser un valor numérico contenido entre 1 y 10000
+        max_amount_of_people:   El Cupo maximo debe estar contenido entre 1 y 10000  
       succes:
         audience_level:         Nivel de audiencia modificado con exito
         event:                  Evento enviado correctamente
