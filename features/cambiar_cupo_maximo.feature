@@ -17,7 +17,7 @@ Scenario: Cambiar cupo maximo con valor cero
   And cliqueo en el boton "Modificar"
   And seteo el cupo maximo en "0"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "El cupo maximo debe ser un valor entero positivo"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
 
 Scenario: Cambiar cupo maximo con valor negativo
   Given voy a la vista "HOME"
@@ -25,4 +25,4 @@ Scenario: Cambiar cupo maximo con valor negativo
   And cliqueo en el boton "Modificar"
   And seteo el cupo maximo en "-1"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "El cupo maximo debe ser un valor entero positivo"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"

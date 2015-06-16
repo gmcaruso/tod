@@ -15,7 +15,8 @@ Given(/^seteo el rol en Administrador$/) do
 end
 
 Given(/^voy a la vista LOG IN$/) do
-  pending # express the regexp above with the code you wish you had
+  visit '/login'
+  
 end
 
 

@@ -1,7 +1,7 @@
 <div class="container">
-<h1><%=t('user.create_user')%></h1>
+<h1><%=t('user.basic_log_in')%></h1>
 
-  <% form_for(@user, '/user/create', html: { class: 'form' }) do |f| %>
+  <% form_for(@user, '/user/check_log_in', html: { class: 'form' }) do |f| %>
     <fieldset>
       <div class="form-group">
         <%= f.label t('user.new.form.user'),
@@ -27,22 +27,12 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <%= f.label t('user.new.form.role.administrator'),
-          class: 'control-label'
-        %>
-          <%= f.check_box :role, class: 'form-control',
-            autofocus: 'true',
-            id: 'role'
-          %>
-      </div>
-
       <div class="form-actions">
-        <%= f.submit t('event.new.form.new_button'),
+        <%= f.submit t('user.log_in_btn'),
           class: 'btn btn-primary'
         %>
         <%= link_to t('event.new.form.cancel_button'),
-          url(:user, :new),
+          url(:user, :login),
           :class => "btn btn-default"
         %>
       </div>

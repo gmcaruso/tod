@@ -35,6 +35,9 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to t('user.create_user'), url_for(:user, :new) %></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to t('user.basic_log_in'), url_for(:user, :login) %></li>
+        </ul>
       <% end %>
 
       <div class="navbar-form navbar-right">
