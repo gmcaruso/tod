@@ -20,7 +20,7 @@ Tod::App.controllers :event do
        
     if (audience_level == "Inicial" || audience_level == "Practicante" || audience_level == "Avanzado")
       if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= max_amount_of_people.to_i) 
-        if(max_amount_of_people.to_i <= 10000)
+        if(max_amount_of_people.to_i >= 1)
           @event= Event.new
           @event.amount_of_people= amount_of_people
           @event.audience_level= audience_level
@@ -67,7 +67,7 @@ Tod::App.controllers :event do
     max_amount_of_people = params[:event][:max_amount_of_people]
     if (audience_level == "Inicial" || audience_level == "Practicante" || audience_level == "Avanzado") #No hardcodear los valores maximos y minimos
       if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= max_amount_of_people.to_i)
-        if( max_amount_of_people.to_i <= 10000) 
+        if(max_amount_of_people.to_i >= 1)
           flash[:success] = t('event.new.edit.success')
         else
         flash[:danger] = t('event.detail.error.max_amount_of_people') 

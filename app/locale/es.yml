@@ -106,8 +106,8 @@ es:
     detail:
       error:
         audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado" (respetando mayúsculas)'
-        amount_of_people:       El Cupo debe ser un valor numérico contenido entre 1 y 10000
-        max_amount_of_people:   El Cupo maximo debe estar contenido entre 1 y 10000  
+        amount_of_people:       El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo
+        max_amount_of_people:   El Cupo máximo debe ser un valor numérico mayor o igual a uno
       succes:
         audience_level:         Nivel de audiencia modificado con exito
         event:                  Evento enviado correctamente
