@@ -67,9 +67,12 @@ Tod::App.controllers :event do
     max_amount_of_people = params[:event][:max_amount_of_people]
     if (audience_level == "Inicial" || audience_level == "Practicante" || audience_level == "Avanzado") #No hardcodear los valores maximos y minimos
       if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= max_amount_of_people.to_i)
-       
+        if( max_amount_of_people.to_i <= 10000) 
           flash[:success] = t('event.new.edit.success')
-       
+        else
+        flash[:danger] = t('event.detail.error.max_amount_of_people') 
+        redirect 'event/list'
+        end
       else
         flash[:danger] = t('event.detail.error.amount_of_people')
         redirect 'event/list'
