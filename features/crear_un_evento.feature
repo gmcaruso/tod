@@ -18,7 +18,7 @@ Scenario: Evento con cupo superando el limite maximo
   And seteo el cupo en "30000"
   And seteo el nivel de audiencia en "Inicial"
   And cliqueo en el link "Nuevo"
-  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
 
 Scenario: Evento con cupo superando el limite minimo
 
@@ -28,7 +28,7 @@ Scenario: Evento con cupo superando el limite minimo
   And seteo el cupo en "-1"
   And seteo el nivel de audiencia en "Inicial"
   And cliqueo en el link "Nuevo"
-  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
 
 Scenario: Evento con cupo nulo
 
@@ -38,4 +38,4 @@ Scenario: Evento con cupo nulo
   And seteo el cupo en "0"
   And seteo el nivel de audiencia en "Inicial"
   And cliqueo en el link "Nuevo"
-  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"

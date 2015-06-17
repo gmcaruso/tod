@@ -19,7 +19,7 @@ Scenario: Limitar cantidad de personas por debajo del minimo cupo por evento
   And cliqueo en el boton "Modificar"
   And fijo la cantidad de personas del evento en "-1"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
 
 
 Scenario: Limitar cantidad de personas en nulo
@@ -28,7 +28,7 @@ Scenario: Limitar cantidad de personas en nulo
   And cliqueo en el boton "Modificar"
   And fijo la cantidad de personas del evento en "0"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
 
 
 Scenario: Limitar cantidad de personas por encima del maximo cupo por evento
@@ -37,7 +37,7 @@ Scenario: Limitar cantidad de personas por encima del maximo cupo por evento
   And cliqueo en el boton "Modificar"
   And fijo la cantidad de personas del evento en "30000000"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
 
 
 Scenario: Limitar cantidad de personas con un valor no numérico
@@ -46,4 +46,4 @@ Scenario: Limitar cantidad de personas con un valor no numérico
   And cliqueo en el boton "Modificar"
   And fijo la cantidad de personas del evento en "qwe"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y 10000"
+  Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
