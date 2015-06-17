@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= t('event.list.title')%></h1>
   <p><%= flash[:success] %></p>
-
+   <% @user = session[:user] %>
   <% if @events.empty? then %>
     <tr><%= t('event.list.empty')%></tr>
   <% else %>
@@ -10,7 +10,9 @@
       <tr>
         <th><%= t('event.list.table.amount_of_people')%></th>
         <th><%= t('event.list.table.audience_level')%></th>
-        <th><%= t('event.list.table.max_amount_of_people')%></th>
+        <%if @user != nil && @user.role == 'Administrador'%>
+          <th><%= t('event.list.table.max_amount_of_people')%></th>
+        <%end%>
         <th><%= t('event.list.table.modify_event')%></th>
       </tr>
 
@@ -18,7 +20,9 @@
         <tr>
           <td><%= event.amount_of_people %></td>
           <td><%= event.audience_level %></td>
-          <td><%= event.max_amount_of_people %></td>
+          <%if @user != nil && @user.role == 'Administrador'%>
+            <td><%= event.max_amount_of_people %></td>
+          <%end%>
           <td>
             <div class="form-actions">
               <%= link_to t('event.list.table.td.modify'),
