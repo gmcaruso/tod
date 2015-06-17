@@ -3,6 +3,7 @@ Given(/^un Evento creado$/) do
   @event = Event.new
   @event.amount_of_people = 50
   @event.audience_level = "Inicial"
+  @event.max_amount_of_people = 60
   @event.save
 end
 
