@@ -12,15 +12,18 @@ Tod::App.controllers :user do
       user = params[:user][:user]
       role = params[:user][:role]
       
-      @user = User.new
-      @user.password= password
-      @user.user= user
-      @user.role= role
-      @user.save
-
-      flash[:success] = t('user.new.result.success')
-
-      redirect '/'
+      if role == 'Usuario' || role == 'Administrador'
+        @user = User.new
+        @user.password= password
+        @user.user= user
+        @user.role= role
+        @user.save
+        flash[:success] = t('user.new.result.success')
+        redirect '/'
+      else
+        flash[:danger] = t('user.new.result.error_role')
+        redirect '/user/new'
+      end
   end
 
   get :login, :map => '/login' do
@@ -42,7 +45,8 @@ Tod::App.controllers :user do
       flash.now[:error] = 'NOOOOOOOOOOOOOOO'
       render 'user/log_in'
     else
-      sign_in @user
+      @user = User.first(:user => user)
+      session[:user] = @user
       redirect '/'          
     end
   end

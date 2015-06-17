@@ -20,7 +20,7 @@ es:
     logged:             Conectado como
     create_user:        Crear usuario
     log_in_btn:         Log in
-
+    role_placeholder:    Agregue Usuario o Administrador
     new:
       form:
         user:             Usuario
@@ -30,6 +30,7 @@ es:
           administrator:  Administrador
       result:
         success:          Usuario creado correctamente
+        error_role:       Debe ingresar un rol como Usuario o Administrador
   proposal:
     new:
       title: Nueva Propuesta

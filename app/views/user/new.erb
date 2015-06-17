@@ -31,8 +31,9 @@
         <%= f.label t('user.new.form.role.administrator'),
           class: 'control-label'
         %>
-          <%= f.check_box :role, class: 'form-control',
+          <%= f.text_field :role, class: 'form-control',
             autofocus: 'true',
+            placeholder: t('user.role_placeholder'),
             id: 'role'
           %>
       </div>
