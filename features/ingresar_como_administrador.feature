@@ -14,6 +14,8 @@ Background:
   And cliqueo en el boton Log in
   Then se debe ver el usuario "Usuario" y su perfil "Administrador" en la pantalla
 
+  Given un Evento creado
+
 
 Scenario: Ingresar como administrador exitosa
   Given voy a la vista LOG IN
@@ -22,7 +24,7 @@ Scenario: Ingresar como administrador exitosa
   And cliqueo en el boton Log in
   Then se debe ver el usuario "Usuario" y su perfil "Administrador" en la pantalla
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el boton "Lista de Eventos"
   And cliqueo en el boton "Modificar"
   Then se debe ver el campo "Cupo máximo"

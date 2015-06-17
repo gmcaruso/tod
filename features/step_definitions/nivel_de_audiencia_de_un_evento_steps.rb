@@ -15,7 +15,6 @@ Given(/^cliqueo en el link "(.*?)"$/) do |link|
 end
 
 Given(/^cliqueo en el boton "(.*?)"$/) do |boton|
-  #page.body
   click_link(boton, :match => :first)
 end
 

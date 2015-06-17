@@ -14,6 +14,8 @@ Background:
   And cliqueo en el boton Log in
   Then se debe ver el usuario "Usuario" y su perfil "Usuario" en la pantalla
 
+  Given un Evento creado
+
 Scenario: Ingresar como usuario exitosa
   Given voy a la vista LOG IN
   And seteo el usuario en "Usuario2"
@@ -21,7 +23,7 @@ Scenario: Ingresar como usuario exitosa
   And cliqueo en el boton Log in
   Then se debe ver el usuario "Usuario2" y su perfil "Usuario" en la pantalla
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el boton "Lista de Eventos"
   And cliqueo en el boton "Modificar"
   Then NO se debe ver el campo "Cupo máximo"
