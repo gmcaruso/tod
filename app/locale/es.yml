@@ -100,8 +100,10 @@ es:
         audience_level:           Nivel de audiencia
         max_amount_of_people:     Cupo máximo  
         modify_event:             Datos
+        modify_amount:            Datos Administrador
         td:
           modify:                 Modificar
+          modify_amount:          Modificar Cupo
       empty:                      "Aun no hay eventos, puedes agregar uno si deseas"
     detail:
       error:

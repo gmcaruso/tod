@@ -42,7 +42,7 @@ Tod::App.controllers :user do
     @user = User.authenticate(user, password)
     if (@user.nil?)
       @user = User.new
-      flash.now[:error] = 'NOOOOOOOOOOOOOOO'
+      flash.now[:info] = 'Usuario incorrecto'
       render 'user/log_in'
     else
       @user = User.first(:user => user)

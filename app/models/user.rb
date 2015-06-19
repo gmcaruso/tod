@@ -3,6 +3,7 @@ class User
 
   # property <name>, <type>
   property :id, Serial
+  property :name, String
   property :user, String
   property :password, String
   property :role, String

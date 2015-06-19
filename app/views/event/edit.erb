@@ -4,12 +4,11 @@
 
 <% form_for(@event, "/event/update/#{@event.id}") do |f| %>
 
-  <%= f.label :amount_of_people %>
+  <%= f.label t('event.new.form.amount_of_people') %>
   <%= f.text_field :amount_of_people, :class => "input-block-level" %>
-  <%= f.label :audience_level %>
+  <%= f.label t('event.new.form.audience_level') %>
   <%= f.text_field :audience_level, :class => "input-block-level" %>
-  <%= f.label :max_amount_of_people %>
-  <%= f.text_field :max_amount_of_people, :class => "input-block-level" %>
+  
   <%= f.submit "Grabar", :class => "btn btn-primary" %>
   <%= link_to 'Cancelar', url_for(:event, :list), :class => "btn btn-secondary" %>
 <% end %>
