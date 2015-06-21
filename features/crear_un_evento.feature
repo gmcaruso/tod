@@ -2,7 +2,7 @@ Feature: Crear un evento
 
 Scenario: Evento nuevo
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "30"
@@ -12,7 +12,7 @@ Scenario: Evento nuevo
 
 Scenario: Evento con cupo superando el limite maximo
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "30000"
@@ -22,7 +22,7 @@ Scenario: Evento con cupo superando el limite maximo
 
 Scenario: Evento con cupo superando el limite minimo
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "-1"
@@ -32,7 +32,7 @@ Scenario: Evento con cupo superando el limite minimo
 
 Scenario: Evento con cupo nulo
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
   Then veo el titulo "Nuevo Evento"
   And seteo el cupo en "0"

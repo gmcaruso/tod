@@ -5,7 +5,7 @@ Background:
 
 Scenario: Setear nivel de audiencia
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
   And cliqueo en el boton "Modificar"
   And modifico el nivel de audiencia en "Inicial"
@@ -14,7 +14,7 @@ Scenario: Setear nivel de audiencia
 
 Scenario: Evento con nivel de audiencia distinto a los recomendados
 
-  Given voy a la vista "HOME"
+  Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
   And cliqueo en el boton "Modificar"
   And modifico el nivel de audiencia en "Pepepompin"
