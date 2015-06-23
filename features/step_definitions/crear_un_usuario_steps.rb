@@ -38,8 +38,7 @@ Then(/^se debe ver el usuario "(.*?)" conectado con el rol "(.*?)"$/) do |arg1, 
 end
 
 Then(/^se debe ver el usuario Usuario conectado con el rol Usuario$/) do
-  pending
-  # expect(page).to have_content 'Conectado como: Usuario Rol: Usuario'
+  expect(page).to have_content 'Conectado como: Usuario Rol: Usuario'
 end
 
 

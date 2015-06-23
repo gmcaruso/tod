@@ -2,12 +2,12 @@ Feature: Crear un evento
 
 Background:
   Given voy a la vista CREATE_USER
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
   And seteo el password en "usuario.0"
   And seteo el rol en "Administrador"
   And cliqueo en el boton "Nuevo"
   Given voy a la vista LOG IN
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
   And seteo el password en "usuario.0"
   And cliqueo en el boton "Log in"
 

@@ -1,6 +1,7 @@
 Feature: Cambiar cupo maximo como usuario
 
 Scenario: Cambiar cupo maximo
+
   Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario"
   And seteo el email en "email@asd.com"

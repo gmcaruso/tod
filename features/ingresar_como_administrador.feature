@@ -2,7 +2,7 @@ Feature: Ingresar como administrador
 
 Background:
   Given voy a la vista CREATE_USER
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
   And seteo el password en "usuario.0"
   And seteo el rol en "Administrador"
   And cliqueo en el boton "Nuevo"
@@ -12,10 +12,10 @@ Background:
 
 Scenario: Ingresar como administrador exitosa
   Given voy a la vista LOG IN
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
   And seteo el password en "usuario.0"
   And cliqueo en el boton "Log in"
-  Then se debe ver el usuario "Usuario" y su perfil "Administrador" en la pantalla
+  Then se debe ver el usuario "UsuarioAdm" y su perfil "Administrador" en la pantalla
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
@@ -35,3 +35,5 @@ Scenario: Ingresar con usuario incorrecto
   And seteo el password en "password"
   And cliqueo en el boton "Log in"
   Then se debe ver el mensaje "Usuario incorrecto"
+
+

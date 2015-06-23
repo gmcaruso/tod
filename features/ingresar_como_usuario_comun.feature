@@ -1,6 +1,7 @@
 Feature: Ingresar como usuario comun
 
 Background:
+  
   Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario2"
   And seteo el password en "usuario.2"
@@ -35,3 +36,4 @@ Scenario: Ingresar con usuario incorrecto
   And seteo el password en "password"
   And cliqueo en el boton "Log in"
   Then se debe ver el mensaje "Usuario incorrecto"
+
