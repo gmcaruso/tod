@@ -1,5 +1,8 @@
 Feature: Iniciar sesion
 
+Background:
+  Given un Evento creado
+
 Scenario: Iniciar sesion para ver las acciones de la aplicacion
 
   Given voy a la vista HOME

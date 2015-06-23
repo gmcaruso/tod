@@ -13,5 +13,5 @@ Then(/^deberia ver la opcion Nuevo Evento y Nueva Propuesta$/) do
 end
 
 Then(/^deberia ver la opcion Modificar$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content('Modificar')
 end
