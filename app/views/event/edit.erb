@@ -7,7 +7,7 @@
   <%= f.label t('event.new.form.amount_of_people') %>
   <%= f.text_field :amount_of_people, :class => "input-block-level" %>
   <%= f.label t('event.new.form.audience_level') %>
-  <%= f.text_field :audience_level, :class => "input-block-level" %>
+  <%= f.select :audience_level, :options =>['Inicial','Practicante','Avanzado'] ,:class => "input-block-level" %>
   
   <%= f.submit "Grabar", :class => "btn btn-primary" %>
   <%= link_to 'Cancelar', url_for(:event, :list), :class => "btn btn-secondary" %>

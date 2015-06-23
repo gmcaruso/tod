@@ -21,7 +21,8 @@
           class: 'control-label'
         %>
         <div class="controls">
-          <%= f.text_field :audience_level, class: 'form-control',
+          <%= f.select :audience_level, :options => ['Inicial','Practicante','Avanzado'],
+            class: 'form-control',
             placeholder: t('event.new.form.place_holder_audience_level'),
             autofocus: 'true',
             id: 'audience_level'

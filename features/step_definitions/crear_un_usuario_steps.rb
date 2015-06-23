@@ -16,7 +16,7 @@ Given(/^seteo el password en "(.*?)"$/) do |password|
 end
 
 Given(/^seteo el rol en "(.*?)"$/) do |rol|
-  fill_in('role', :with => rol)
+  select(rol, :from => 'role')
 end
 
 Given(/^voy a la vista LOG IN$/) do

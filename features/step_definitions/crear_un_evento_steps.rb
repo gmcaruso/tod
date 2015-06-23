@@ -7,11 +7,11 @@ Then(/^seteo el cupo en "(.*?)"$/) do |cupo|
 end
 
 Then(/^seteo el nivel de audiencia en "(.*?)"$/) do |nivel|
-  fill_in('audience_level', :with => nivel)
+  select(nivel, :from => 'audience_level')
 end
 
 Given(/^modifico el nivel de audiencia en "(.*?)"$/) do |nivel|
-  fill_in('event_audience_level', :with => nivel)
+  select(nivel, :from => 'event_audience_level')
 end
 
 Given(/^cliqueo en el link Nuevo Evento$/) do

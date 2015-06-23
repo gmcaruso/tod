@@ -24,7 +24,7 @@ Scenario: Setear nivel de audiencia
   And modifico el nivel de audiencia en "Inicial"
   And cliqueo en el boton "Grabar"
   Then se debe ver el mensaje "Evento creado correctamente"
-
+@wip
 Scenario: Evento con nivel de audiencia distinto a los recomendados
 
   Given voy a la vista HOME
