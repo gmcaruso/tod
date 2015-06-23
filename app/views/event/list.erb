@@ -10,22 +10,22 @@
       <tr>
         <th><%= t('event.list.table.amount_of_people')%></th>
         <th><%= t('event.list.table.audience_level')%></th>
-        
-          <th><%= t('event.list.table.max_amount_of_people')%></th>
-        
+        <th><%= t('event.list.table.max_amount_of_people')%></th>
+        <% if @user %>
         <th><%= t('event.list.table.modify_event')%></th>
+        <% end %>
         <%if @user != nil && @user.role == 'Administrador'%>
           <th><%= t('event.list.table.modify_amount')%></th>
         <%end%>
+
       </tr>
 
       <% @events.each do |event| %>
         <tr>
           <td><%= event.amount_of_people %></td>
           <td><%= event.audience_level %></td>
-          
-            <td><%= event.max_amount_of_people %></td>
-          
+          <td><%= event.max_amount_of_people %></td>
+          <% if @user %>
           <td>
             <div class="form-actions">
               <%= link_to t('event.list.table.td.modify'),
@@ -35,16 +35,18 @@
               %>
             </div>
           </td>
+
           <%if @user != nil && @user.role == 'Administrador'%>
             <td>
-            <div class="form-actions">
-              <%= link_to t('event.list.table.td.modify_amount'),
-                url_for(:event, :modify_amount, :event_id => event.id),
-                :id => "modify_btn",
-                :class => "btn btn-danger"
-              %>
-            </div>
-          </td>
+              <div class="form-actions">
+                <%= link_to t('event.list.table.td.modify_amount'),
+                  url_for(:event, :modify_amount, :event_id => event.id),
+                  :id => "modify_btn",
+                  :class => "btn btn-danger"
+                %>
+              </div>
+            </td>
+          <%end%>
           <%end%>
         </tr>
       <% end %>

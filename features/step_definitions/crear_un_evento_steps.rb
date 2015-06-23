@@ -13,3 +13,7 @@ end
 Given(/^modifico el nivel de audiencia en "(.*?)"$/) do |nivel|
   fill_in('event_audience_level', :with => nivel)
 end
+
+Given(/^cliqueo en el link Nuevo Evento$/) do
+  click_link('Nuevo Evento')
+end

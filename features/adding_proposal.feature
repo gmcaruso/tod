@@ -1,6 +1,20 @@
 Feature: Adding proposal
 
 Background:
+  Given voy a la vista CREATE_USER
+  And seteo el usuario en "Author"
+  And seteo el email en "email@asd.com"
+  And seteo el password en "usuario.0"
+  And seteo el rol en "Administrador"
+  And cliqueo en el boton "Nuevo"
+  Then se debe ver el mensaje "Author creado correctamente"
+
+  Given voy a la vista LOG IN
+  And seteo el usuario en "Author"
+  And seteo el password en "usuario.0"
+  And cliqueo en el boton "Log in"
+  Then se debe ver el usuario "Author" y su perfil "Administrador" en la pantalla
+
   Given new proposal page
 
 Scenario: Adding a proposal that complies

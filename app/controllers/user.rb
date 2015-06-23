@@ -9,14 +9,16 @@ Tod::App.controllers :user do
 
   post :create do
       password = params[:user][:password]
-      user = params[:user][:user]
       role = params[:user][:role]
+      name = params[:user][:name]
+      email = params[:user][:email]
       
       if role == 'Usuario' || role == 'Administrador'
         @user = User.new
         @user.password= password
-        @user.user= user
         @user.role= role
+        @user.name= name
+        @user.email= email
         @user.save
         flash[:success] = t('user.new.result.success')
         redirect '/'
@@ -37,17 +39,18 @@ Tod::App.controllers :user do
   end
 
   post :check_log_in do
-    user = params[:user][:user]
+    name = params[:user][:name]
     password = params[:user][:password]
-    @user = User.authenticate(user, password)
-    if (@user.nil?)
-      @user = User.new
-      flash.now[:info] = 'Usuario incorrecto'
-      render 'user/log_in'
-    else
-      @user = User.first(:user => user)
-      session[:user] = @user
+    if (User.authenticate(name, password))
+      @name = User.first(:name => name)
+      session[:user] = @name
       redirect '/'          
+    else
+      @user= User.new
+      flash.now[:danger] = 'Usuario incorrecto'
+      render 'user/log_in'
     end
+
   end
+
 end

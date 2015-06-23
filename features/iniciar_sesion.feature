@@ -1,22 +1,24 @@
-Feature: Cambiar cupo maximo como usuario
+Feature: Iniciar sesion
 
-Background:
+Scenario: Iniciar sesion para ver las acciones de la aplicacion
+
+  Given voy a la vista HOME
+  Then NO deberia ver la opcion Nuevo Evento y Nueva Propuesta
+  And cliqueo en el link "Lista de Eventos"
+  Then NO deberia ver la opcion Modificar
+
   Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario"
   And seteo el password en "usuario.0"
   And seteo el rol en "Usuario"
   And cliqueo en el boton "Nuevo"
-  Then se debe ver el mensaje "Usuario creado correctamente"
 
   Given voy a la vista LOG IN
   And seteo el usuario en "Usuario"
   And seteo el password en "usuario.0"
   And cliqueo en el boton "Log in"
-  Then se debe ver el usuario "Usuario" y su perfil "Usuario" en la pantalla
 
-  Given un Evento creado
-
-Scenario: Cambiar cupo maximo
   Given voy a la vista HOME
+  Then deberia ver la opcion Nuevo Evento y Nueva Propuesta
   And cliqueo en el link "Lista de Eventos"
-  Then NO se debe ver el campo "Modificar Cupo"
+  Then deberia ver la opcion Modificar

@@ -1,5 +1,6 @@
 # encoding: UTF-8
 Given(/^un Evento creado$/) do
+  Event.all.destroy
   @event = Event.new
   @event.amount_of_people = 50
   @event.audience_level = "Inicial"
@@ -13,10 +14,6 @@ end
 
 Given(/^cliqueo en el link "(.*?)"$/) do |link|
   click_link(link)
-end
-
-Given(/^cliqueo en el boton "(.*?)"$/) do |boton|
-  click_link(boton, :match => :first)
 end
 
 Then(/^se debe ver el mensaje "(.*?)"$/) do |mensaje|

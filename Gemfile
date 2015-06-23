@@ -37,6 +37,7 @@ gem 'guard-rspec'
 gem 'cucumber'
 gem 'travis-yaml'
 gem 'capybara'
+gem 'selenium-webdriver'
 
 # Heroku
 gem 'dm-postgres-adapter', :group => :production

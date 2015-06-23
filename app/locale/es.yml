@@ -23,8 +23,10 @@ es:
     role_placeholder:    Agregue Usuario o Administrador
     new:
       form:
+        name:             Nombre
         user:             Usuario
         password:         Password
+        email:            Email
         role:            
           role:           Rol
           administrator:  Administrador
@@ -99,8 +101,8 @@ es:
         amount_of_people:         Cupo
         audience_level:           Nivel de audiencia
         max_amount_of_people:     Cupo máximo  
-        modify_event:             Datos
-        modify_amount:            Datos Administrador
+        modify_event:             Acciones
+        modify_amount:            Acciones de Administrador
         td:
           modify:                 Modificar
           modify_amount:          Modificar Cupo
