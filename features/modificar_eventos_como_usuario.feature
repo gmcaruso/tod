@@ -19,14 +19,14 @@ Scenario: Modificar envento creado por mi siendo usuario
   And cliqueo en el link "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el link "Nuevo"
+  And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
   Then veo el boton "Modificar"
 
-@wip
+
 Scenario: Modificar envento NO creado por mi siendo usuario
   Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario"
@@ -45,9 +45,9 @@ Scenario: Modificar envento NO creado por mi siendo usuario
   And cliqueo en el link "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el link "Nuevo"
+  And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
-  And cliqueo Cerrar Sesion
+  
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
@@ -58,7 +58,7 @@ Scenario: Modificar envento NO creado por mi siendo usuario
   And seteo el usuario en "Pepe"
   And seteo el password en "pepe.0"
   And seteo el rol en "Usuario"
-  And cliqueo en el boton "Crear usuario"
+  And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Usuario creado correctamente"
 
   Given voy a la vista LOG IN

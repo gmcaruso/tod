@@ -24,7 +24,7 @@ Scenario: Iniciar sesion para ver las acciones de la aplicacion
   And cliqueo en el link "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el link "Nuevo"
+  And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
 
   Given voy a la vista HOME

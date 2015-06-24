@@ -18,11 +18,7 @@ Scenario: Ingresar como usuario exitosa
   And cliqueo en el boton "Log in"
   Then se debe ver el usuario "Usuario2" y su perfil "Usuario" en la pantalla
 
-  Given voy a la vista HOME
-  And cliqueo en el link "Lista de Eventos"
-  And cliqueo en el link Modificar
-  Then NO se debe ver el campo "Cupo máximo"
-
+  
 Scenario: Ingresar con password incorrecto
   Given voy a la vista LOG IN
   And seteo el usuario en "Usuario2"

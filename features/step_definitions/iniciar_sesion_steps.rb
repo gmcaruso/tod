@@ -13,7 +13,5 @@ Then(/^deberia ver la opcion Nuevo Evento y Nueva Propuesta$/) do
 end
 
 Then(/^deberia ver la opcion Modificar$/) do
-  pending
-  # puts page.body
-  # expect(page).to have_content('Modificar')
+   expect(page).to have_content('Modificar')
 end

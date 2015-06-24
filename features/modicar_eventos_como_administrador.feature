@@ -20,14 +20,14 @@ Scenario: Modificar evento creado por mi siendo administrador
   And cliqueo en el link "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
-  And cliqueo en el link "Nuevo"
+  And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
   Then veo el boton "Modificar"
 
-@wip
+
 Scenario: Modificar evento creado por otro usuario siendo administrador
 
   Given voy a la vista CREATE_USER
@@ -48,7 +48,6 @@ Scenario: Modificar evento creado por otro usuario siendo administrador
   And cliqueo en el link "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
-  And seteo el cupo maximo en "50"
   And cliqueo en el link "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
 
