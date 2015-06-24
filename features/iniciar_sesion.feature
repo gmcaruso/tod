@@ -1,5 +1,5 @@
 Feature: Iniciar sesion
-@wip
+
 Scenario: Iniciar sesion para ver las acciones de la aplicacion
 
   Given voy a la vista HOME

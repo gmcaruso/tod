@@ -10,7 +10,7 @@ Background:
   Then se debe ver el mensaje "Usuario creado correctamente"
 
   Given un Evento creado
-@wip
+
 Scenario: Ingresar como usuario exitosa
   Given voy a la vista LOG IN
   And seteo el usuario en "Usuario2"
@@ -20,7 +20,7 @@ Scenario: Ingresar como usuario exitosa
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  And cliqueo en el link "Modificar"
+  And cliqueo en el link Modificar
   Then NO se debe ver el campo "Cupo máximo"
 
 Scenario: Ingresar con password incorrecto

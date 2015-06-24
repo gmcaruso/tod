@@ -1,19 +1,20 @@
-Feature: Modificar eventos como usuario
+Feature: Modificar evento como administrador
 
-Scenario: Modificar envento creado por mi siendo usuario
+Scenario: Modificar evento creado por mi siendo administrador
+
   Given voy a la vista CREATE_USER
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
   And seteo el email en "email@asd.com"
   And seteo el password en "usuario.0"
-  And seteo el rol en "Usuario"
+  And seteo el rol en "Administrador"
   And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Usuario creado correctamente"
 
   Given voy a la vista LOG IN
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
   And seteo el password en "usuario.0"
   And cliqueo en el boton "Log in"
-  Then se debe ver el usuario "Usuario" y su perfil "Usuario" en la pantalla
+  Then se debe ver el usuario "UsuarioAdm" y su perfil "Administrador" en la pantalla
 
   Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
@@ -27,46 +28,43 @@ Scenario: Modificar envento creado por mi siendo usuario
   Then veo el boton "Modificar"
 
 @wip
-Scenario: Modificar envento NO creado por mi siendo usuario
+Scenario: Modificar evento creado por otro usuario siendo administrador
+
   Given voy a la vista CREATE_USER
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
+  And seteo el email en "email@asd.com"
   And seteo el password en "usuario.0"
-  And seteo el rol en "Usuario"
+  And seteo el rol en "Administrador"
   And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Usuario creado correctamente"
 
   Given voy a la vista LOG IN
-  And seteo el usuario en "Usuario"
+  And seteo el usuario en "UsuarioAdm"
   And seteo el password en "usuario.0"
   And cliqueo en el boton "Log in"
-  Then se debe ver el usuario "Usuario" y su perfil "Usuario" en la pantalla
+  Then se debe ver el usuario "UsuarioAdm" y su perfil "Administrador" en la pantalla
 
   Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
   And seteo el cupo en "30"
   And seteo el nivel de audiencia en "Inicial"
+  And seteo el cupo maximo en "50"
   And cliqueo en el link "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
-  And cliqueo Cerrar Sesion
-
-  Given voy a la vista HOME
-  And cliqueo en el link "Lista de Eventos"
-  Then veo el evento con cupo "30" nivel de audiencia "Inicial" y cupo maximo "50"
-  Then veo el boton "Modificar"
 
   Given voy a la vista CREATE_USER
-  And seteo el usuario en "Pepe"
-  And seteo el password en "pepe.0"
-  And seteo el rol en "Usuario"
-  And cliqueo en el boton "Crear usuario"
+  And seteo el usuario en "Jorge"
+  And seteo el email en "email@asd.com"
+  And seteo el password en "jorge.0"
+  And seteo el rol en "Administrador"
+  And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Usuario creado correctamente"
 
   Given voy a la vista LOG IN
-  And seteo el usuario en "Pepe"
-  And seteo el password en "pepe.0"
+  And seteo el usuario en "Jorge"
+  And seteo el password en "jorge.0"
   And cliqueo en el boton "Log in"
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  Then veo el evento con cupo "30" nivel de audiencia "Inicial" y cupo maximo "50"
-  Then NO veo el boton "Modificar"
+  Then veo el boton "Modificar"
