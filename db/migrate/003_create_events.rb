@@ -5,6 +5,7 @@ migration 3, :create_events do
       column :amount_of_people, DataMapper::Property::Integer
       column :audience_level, DataMapper::Property::String, :length => 255
       column :max_amount_of_people, DataMapper::Property::Integer
+      column :user_id, DataMapper::Property::Ingeger
     end
   end
 
