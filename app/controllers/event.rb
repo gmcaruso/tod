@@ -26,6 +26,7 @@ Tod::App.controllers :event do
         @event.amount_of_people= amount_of_people
         @event.audience_level= audience_level
         @event.max_amount_of_people= max_amount_of_people
+
         @event.user_id= @user.id
 
         if @event.save

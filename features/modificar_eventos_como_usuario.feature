@@ -1,5 +1,5 @@
 Feature: Modificar eventos como usuario
-
+@wip
 Scenario: Modificar envento creado por mi siendo usuario
   Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario"
@@ -18,13 +18,12 @@ Scenario: Modificar envento creado por mi siendo usuario
   Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
   And seteo el cupo en "30"
-
+  And seteo el nivel de audiencia en "Inicial"
   And cliqueo en el link "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  Then veo el evento con cupo "30" nivel de audiencia "Inicial" y cupo maximo "10000"
   Then veo el boton "Modificar"
 
 @wip

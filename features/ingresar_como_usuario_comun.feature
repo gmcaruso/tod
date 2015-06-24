@@ -1,7 +1,7 @@
 Feature: Ingresar como usuario comun
 
 Background:
-  
+
   Given voy a la vista CREATE_USER
   And seteo el usuario en "Usuario2"
   And seteo el password en "usuario.2"
@@ -10,7 +10,7 @@ Background:
   Then se debe ver el mensaje "Usuario creado correctamente"
 
   Given un Evento creado
-
+@wip
 Scenario: Ingresar como usuario exitosa
   Given voy a la vista LOG IN
   And seteo el usuario en "Usuario2"
@@ -36,4 +36,3 @@ Scenario: Ingresar con usuario incorrecto
   And seteo el password en "password"
   And cliqueo en el boton "Log in"
   Then se debe ver el mensaje "Usuario incorrecto"
-

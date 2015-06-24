@@ -25,17 +25,19 @@
           <td><%= event.amount_of_people %></td>
           <td><%= event.audience_level %></td>
           <td><%= event.max_amount_of_people %></td>
+            <% if@user %>
           <td>
             <div class="form-actions">
-          <% if @user.id == event.user_id || @user.role == 'Administrador' %>
-              <%= link_to t('event.list.table.td.modify'),
-                url_for(:event, :modify_event, :event_id => event.id),
-                :id => "modify_btn",
-                :class => "btn btn-success"
-              %>
-          <%end%>
+            <% if @user.id == event.user_id || @user.role == 'Administrador' %>
+                <%= link_to t('event.list.table.td.modify'),
+                  url_for(:event, :modify_event, :event_id => event.id),
+                  :id => "modify_btn",
+                  :class => "btn btn-success"
+                %>
+            <%end%>
             </div>
           </td>
+          <%end%>
 
           <%if @user != nil && @user.role == 'Administrador'%>
             <td>

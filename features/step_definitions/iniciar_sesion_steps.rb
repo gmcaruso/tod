@@ -13,5 +13,6 @@ Then(/^deberia ver la opcion Nuevo Evento y Nueva Propuesta$/) do
 end
 
 Then(/^deberia ver la opcion Modificar$/) do
+  puts page.body
   expect(page).to have_content('Modificar')
 end
