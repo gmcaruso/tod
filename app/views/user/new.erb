@@ -43,10 +43,9 @@
         <%= f.label t('user.new.form.role.role'),
           class: 'control-label'
         %>
-          <%= f.select :role, :options => ['Usuario','Administrador'],
+          <%= f.select :role, :options => [t('user.new.form.user'),t('user.new.form.role.administrator')],
             class: 'form-control',
             autofocus: 'true',
-            placeholder: t('user.role_placeholder'),
             id: 'role'
           %>
       </div>

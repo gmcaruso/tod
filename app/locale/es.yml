@@ -84,7 +84,9 @@ es:
         amount_of_people:               Cupo
         place_holder_amount_of_people:  Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo
         audience_level:                 Nivel de audiencia
-        place_holder_audience_level:    "Los niveles de audiencia son: Inicial, Practicante y Avanzado"
+        audience_1:               Inicial
+        audience_2:               Practicante
+        audience_3:               Avanzado
         max_amount_of_people:           Cupo máximo
         new_button:                     Nuevo
         save_button:                    Guardar
@@ -109,7 +111,6 @@ es:
       empty:                      "Aun no hay eventos, puedes agregar uno si deseas"
     detail:
       error:
-        audience_level:         'El nivel de audiencia debe ser "Inicial", "Practicante" o "Avanzado" (respetando mayúsculas)'
         amount_of_people:       El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo
         max_amount_of_people:   El Cupo máximo debe ser un valor numérico mayor o igual a uno
       succes:

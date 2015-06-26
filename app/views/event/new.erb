@@ -21,9 +21,8 @@
           class: 'control-label'
         %>
         <div class="controls">
-          <%= f.select :audience_level, :options => ['Inicial','Practicante','Avanzado'],
+          <%= f.select :audience_level, :options => [t('event.new.form.audience_1'),t('event.new.form.audience_2'),t('event.new.form.audience_3')],
             class: 'form-control',
-            placeholder: t('event.new.form.place_holder_audience_level'),
             autofocus: 'true',
             id: 'audience_level'
           %>
