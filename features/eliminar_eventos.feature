@@ -24,7 +24,7 @@ Scenario: Eliminar evento creado por mi siendo usuario
   And cliqueo en el link "Lista de Eventos"
   Then veo el evento con cupo "40" y nivel de audiencia "Inicial"
   Then veo el boton "Eliminar"
-  And cliqueo en el boton "Eliminar"
+  And cliqueo en el link "Eliminar"
   Then se debe ver el mensaje "Evento eliminado correctamente"
 
 Scenario: Eliminar evento creado por otro usuario
@@ -61,7 +61,7 @@ Scenario: Eliminar evento creado por otro usuario
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  Then veo el evento con cupo "40" y nivel de audiencia "Inicial"
+  Then veo el evento con cupo "30" y nivel de audiencia "Inicial"
   Then NO veo el boton "Eliminar"
 
 Scenario: Eliminar evento por un administrador
@@ -79,25 +79,26 @@ Scenario: Eliminar evento por un administrador
 
   Given voy a la vista HOME
   And cliqueo en el link "Nuevo Evento"
-  And seteo el cupo en "30"
+  And seteo el cupo en "50"
   And seteo el nivel de audiencia en "Inicial"
   And cliqueo en el boton "Nuevo"
   Then se debe ver el mensaje "Evento creado correctamente"
   And cliqueo en el link "Cerrar sesión"
 
   Given voy a la vista CREATE_USER
-  And seteo el usuario en "UsuarioAdm"
+  And seteo el usuario en "UsuarioAdm2"
   And seteo el password en "adm.0"
   And seteo el rol en "Administrador"
   And cliqueo en el boton "Nuevo"
 
   Given voy a la vista LOG IN
-  And seteo el usuario en "UsuarioAdm"
+  And seteo el usuario en "UsuarioAdm2"
   And seteo el password en "adm.0"
   And cliqueo en el boton "Log in"
 
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  Then veo el evento con cupo "40" y nivel de audiencia "Inicial"
-  And cliqueo en el boton "Eliminar"
-  Then se debe ver el mensaje "Evento eliminado correctamente"
+  Then veo el evento con cupo "50" y nivel de audiencia "Inicial"
+  Then veo el boton "Eliminar"
+  
+  

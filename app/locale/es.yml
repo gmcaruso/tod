@@ -91,6 +91,7 @@ es:
         new_button:                     Nuevo
         save_button:                    Guardar
         cancel_button:                  Cancelar
+        delete_button:                  Eliminar
       edit:
         edit:                           Evento editado
         audience_level:                 Nivel de audiencia
@@ -116,3 +117,4 @@ es:
       succes:
         audience_level:         Nivel de audiencia modificado con exito
         event:                  Evento enviado correctamente
+        delete:                 Evento eliminado correctamente

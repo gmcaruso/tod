@@ -11,9 +11,11 @@
         <th><%= t('event.list.table.amount_of_people')%></th>
         <th><%= t('event.list.table.audience_level')%></th>
         <th><%= t('event.list.table.max_amount_of_people')%></th>
-        <% if @user %>
+        <%if @user %>
         <th><%= t('event.list.table.modify_event')%></th>
-        <% end %>
+        <%end%>
+        
+
         <%if @user != nil && @user.role == 'Administrador'%>
           <th><%= t('event.list.table.modify_amount')%></th>
         <%end%>
@@ -32,13 +34,19 @@
                 <%= link_to t('event.list.table.td.modify'),
                   url_for(:event, :modify_event, :event_id => event.id),
                   :id => "modify_btn",
+                  :autofocus => 'true',
                   :class => "btn btn-success"
                 %>
-            <%end%>
+                <%= link_to 'Eliminar',
+                  url_for(:event, :remove, :event_id => event.id),
+                  :id => "modify_btn",
+                  :autofocus => 'true',
+                  :class => "btn btn-danger"
+                %>
             </div>
-          </td>
+          </td>  
+            <%end%>
           <%end%>
-
           <%if @user != nil && @user.role == 'Administrador'%>
             <td>
               <div class="form-actions">

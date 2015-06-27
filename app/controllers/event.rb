@@ -96,4 +96,13 @@ Tod::App.controllers :event do
     redirect 'event/list'
   end
 
+  get :remove, :with => :event_id do
+    @event = Event.get(params[:event_id])
+    if @event.destroy!
+      @event.destroy
+      flash[:success] = t('event.detail.succes.delete')
+      redirect 'event/list'
+    end
+  end
+
 end
