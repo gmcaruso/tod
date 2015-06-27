@@ -8,6 +8,7 @@
     <table class="table table-bordered">
 
       <tr>
+        <th><%= t('event.list.table.name')%></th>
         <th><%= t('event.list.table.amount_of_people')%></th>
         <th><%= t('event.list.table.audience_level')%></th>
         <th><%= t('event.list.table.max_amount_of_people')%></th>
@@ -24,6 +25,7 @@
 
       <% @events.each do |event| %>
         <tr>
+          <td><%= event.name %></td>
           <td><%= event.amount_of_people %></td>
           <td><%= event.audience_level %></td>
           <td><%= event.max_amount_of_people %></td>
@@ -37,7 +39,7 @@
                   :autofocus => 'true',
                   :class => "btn btn-success"
                 %>
-                <%= link_to 'Eliminar',
+                <%= link_to t('event.new.form.delete_button'),
                   url_for(:event, :remove, :event_id => event.id),
                   :id => "modify_btn",
                   :autofocus => 'true',

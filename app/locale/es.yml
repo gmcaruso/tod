@@ -101,6 +101,7 @@ es:
     list:
       title:                    Lista de Eventos
       table:
+        name:                     Nombre
         amount_of_people:         Cupo
         audience_level:           Nivel de audiencia
         max_amount_of_people:     Cupo máximo  

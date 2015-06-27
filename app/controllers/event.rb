@@ -22,6 +22,7 @@ Tod::App.controllers :event do
 
       @user = session[:user]
       @event= Event.new
+      @event.name= session[:user].name
       @event.amount_of_people= amount_of_people
       @event.audience_level= audience_level
       @event.max_amount_of_people= max_amount_of_people
