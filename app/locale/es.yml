@@ -6,6 +6,7 @@ es:
     new_event:          Nuevo Evento
     proposal_list:      Lista de propuestas
     event_list:         Lista de Eventos
+    configurations:     Configuración
     search_placeholder: Búsqueda
     search_button:      Buscar
   footer:
@@ -76,13 +77,16 @@ es:
       title: Resultados de búsqueda
       empty: No se han encontrado resultados
   event:
+    general:
+      general_modifications:            Modificaciones generales
+      general_amount_of_people:         Cupo máximo general
     new:
       result:
         success:                        Evento creado correctamente
       title: Nuevo Evento
       form:
         amount_of_people:               Cupo
-        place_holder_amount_of_people:  Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo
+        place_holder_amount_of_people:  Cupo debe ser un valor numérico contenido entre 1 y 10000
         audience_level:                 Nivel de audiencia
         audience_1:               Inicial
         audience_2:               Practicante

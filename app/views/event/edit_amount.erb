@@ -1,12 +1,12 @@
 <div class="container">
-  <h1><%=t('event.new.edit.edit')%></h1>
+  <h1><%=t('event.general.general_modifications')%></h1>
 
-
+  <h2><%=t('event.general.general_amount_of_people')%></h2>
   <form method="POST" action="/event/change_max_amount">
   	<%= csrf_token_field %>
   	<input type="text" name="max_amount_of_people" class="input-block-level"/>
 
-    <input type="submit" class="btn btn-primary" value="Grabar" id="BTCreateLargeShip">
+    <input type="submit" class="btn btn-primary" value="Modificar" id="max_amount_of_people">
 
   </form>
 

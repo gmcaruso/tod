@@ -32,11 +32,6 @@ Then(/^se debe ver el usuario "(.*?)" y su perfil "(.*?)" en la pantalla$/) do |
   expect(page).to have_content mensaje
 end
 
-Then(/^se debe ver el usuario "(.*?)" conectado con el rol "(.*?)"$/) do |arg1, arg2|
-  # puts page.body
-  # Conectado como: Usuario Rol: Usuario
-end
-
 Then(/^se debe ver el usuario Usuario conectado con el rol Usuario$/) do
   expect(page).to have_content 'Conectado como: Usuario Rol: Usuario'
 end

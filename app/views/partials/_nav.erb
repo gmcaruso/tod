@@ -9,12 +9,12 @@
       </ul>
       <% @user = session[:user] %>
       <% if @user %>
-      <ul class="nav navbar-nav">
-        <li><%= link_to t('nav.new_proposal'), url_for(:proposal, :new) %></li>
-      </ul>
-      <ul class="nav navbar-nav">
-        <li><%= link_to t('nav.new_event'), url_for(:event, :new) %></li>
-      </ul>
+        <ul class="nav navbar-nav">
+          <li><%= link_to t('nav.new_proposal'), url_for(:proposal, :new) %></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><%= link_to t('nav.new_event'), url_for(:event, :new) %></li>
+        </ul>
       <% end %>
       <ul class="nav navbar-nav">
         <li><%= link_to t('nav.proposal_list'), url_for(:proposal, :list) %></li>
@@ -22,6 +22,14 @@
       <ul class="nav navbar-nav">
         <li><%= link_to t('nav.event_list'), url_for(:event, :list) %></li>
       </ul>
+      <% @user = session[:user] %>
+      <% if @user %>
+        <% if @user.role == 'Administrador' %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to t('nav.configurations'), url_for(:event, :modify_amount) %></li>
+          </ul>
+        <% end %>
+      <% end %>
 
       <% @user = session[:user] %>
       <% if @user %>

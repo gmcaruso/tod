@@ -19,24 +19,24 @@ Background:
 Scenario: Cambiar cupo maximo
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  And cliqueo en el link "Modificar Cupo"
+  And cliqueo en el link "Configuración"
   And seteo el cupo maximo en "20"
-  And cliqueo en el boton "Grabar"
+  And cliqueo en el boton "Modificar"
   Then se debe ver en la lista de eventos el cupo maximo cambiado en "20"
 
 Scenario: Cambiar cupo maximo con valor cero
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  And cliqueo en el link "Modificar Cupo"
+  And cliqueo en el link "Configuración"
   And seteo el cupo maximo en "0"
-  And cliqueo en el boton "Grabar"
+  And cliqueo en el boton "Modificar"
   Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
 
 Scenario: Cambiar cupo maximo con valor negativo
   Given voy a la vista HOME
   And cliqueo en el link "Lista de Eventos"
-  And cliqueo en el link "Modificar Cupo"
+  And cliqueo en el link "Configuración"
   And seteo el cupo maximo en "-1"
-  And cliqueo en el boton "Grabar"
+  And cliqueo en el boton "Modificar"
   Then se debe ver el mensaje "El Cupo debe ser un valor numérico contenido entre 1 y el valor del cupo máximo"
 

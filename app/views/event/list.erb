@@ -16,9 +16,6 @@
         <th><%= t('event.list.table.modify_event')%></th>
         <%end%>
 
-
-
-
       </tr>
 
       <% @events.each do |event| %>
@@ -52,19 +49,7 @@
       <% end %>
 
     </table>
-    <% if @user %>
-       <%if @user.role == 'Administrador' %>
-      <div class="form-actions">
-        <%= link_to t('event.list.table.td.modify_amount'),
-          url_for(:event, :modify_amount),
-          :id => "modify_btn",
-          :class => "btn btn-danger"
-        %>
-      </div>
-
-      <% end %>
-      <% end %>
-  <% end %>
+    <% end %>
 
 
 </div>

@@ -18,9 +18,7 @@ Scenario: Ingresar como administrador exitosa
   Then se debe ver el usuario "UsuarioAdm" y su perfil "Administrador" en la pantalla
 
   Given voy a la vista HOME
-  And cliqueo en el link "Lista de Eventos"
-  And cliqueo en el link "Modificar"
-  Then se debe ver el campo "Cupo máximo"
+  Then se debe ver el campo "Configuración"
 
 Scenario: Ingresar con password incorrecto
   Given voy a la vista LOG IN

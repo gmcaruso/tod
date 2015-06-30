@@ -6,6 +6,3 @@ Then(/^se debe ver en la lista de eventos el cupo maximo cambiado en "(.*?)"$/) 
   expect(page).to have_content(maximo)
 end
 
-Given(/^cliqueo en el boton Modificar Cupo$/) do
-  pending #click_button('Modificar Cupo',:match => :first)
-end
