@@ -34,8 +34,8 @@
       <% @user = session[:user] %>
       <% if @user %>
         <ul class="nav navbar-nav">
-          <li><p class="navbar-text navbar-right"><%= t('user.logged') + ': ' + @user.name + ' ' +
-           t('user.new.form.role.role') +': ' + @user.role %></p></li>
+          <li><b class="navbar-text navbar-right"><%= t('user.logged') + ': ' + @user.name + ' ' +
+           t('user.new.form.role.role') +': ' + @user.role %></b></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to t('user.log_out'), url_for(:auth, :log_out) %></li>
