@@ -15,11 +15,9 @@
         <%if @user %>
         <th><%= t('event.list.table.modify_event')%></th>
         <%end%>
-        
 
-        <%if @user != nil && @user.role == 'Administrador'%>
-          <th><%= t('event.list.table.modify_amount')%></th>
-        <%end%>
+
+
 
       </tr>
 
@@ -46,24 +44,26 @@
                   :class => "btn btn-danger"
                 %>
             </div>
-          </td>  
+          </td>
             <%end%>
           <%end%>
-          <%if @user != nil && @user.role == 'Administrador'%>
-            <td>
-              <div class="form-actions">
-                <%= link_to t('event.list.table.td.modify_amount'),
-                  url_for(:event, :modify_amount, :event_id => event.id),
-                  :id => "modify_btn",
-                  :class => "btn btn-danger"
-                %>
-              </div>
-            </td>
-          <%end%>
+
         </tr>
       <% end %>
 
     </table>
+    <% if @user %>
+       <%if @user.role == 'Administrador' %>
+      <div class="form-actions">
+        <%= link_to t('event.list.table.td.modify_amount'),
+          url_for(:event, :modify_amount),
+          :id => "modify_btn",
+          :class => "btn btn-danger"
+        %>
+      </div>
+
+      <% end %>
+      <% end %>
   <% end %>
 
 

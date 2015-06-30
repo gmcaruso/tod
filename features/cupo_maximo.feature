@@ -1,6 +1,6 @@
 Feature: como administrador quiero ver el cupo máximo general
 
-@wip
+
 Scenario: como administrador quiero ver el cupo máximo general
 
   Given voy a la vista CREATE_USER
@@ -15,13 +15,11 @@ Scenario: como administrador quiero ver el cupo máximo general
   And cliqueo en el boton "Log in"
 
   Given voy a la vista HOME
-  Then se debe ver el campo "Configuración"
-  And cliqueo en el link "Configuración"
-  Then se debe ver el boton "Modificar Cupo"
+  Then se debe ver el campo "Modificar Cupo"
 
-@wip
+
 Scenario: como usuario quiero ver el cupo máximo general
- 
+
  Given voy a la vista CREATE_USER
  And seteo el usuario en "Usuario"
  And seteo el password en "usuario.0"
@@ -33,6 +31,6 @@ Scenario: como usuario quiero ver el cupo máximo general
  And seteo el password en "usuario.0"
  And cliqueo en el boton "Log in"
 
- 
+
  Given voy a la vista HOME
- Then No debo ver el campo "Configuracion"
+ Then No debo ver el campo "Modificar Cupo"

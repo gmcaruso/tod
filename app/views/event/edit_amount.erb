@@ -1,13 +1,15 @@
 <div class="container">
-<h1><%=t('event.new.edit.edit')%></h1>
+  <h1><%=t('event.new.edit.edit')%></h1>
 
 
-<% form_for(@event, "/event/update_amount/#{@event.id}") do |f| %>
+  <form method="POST" action="/event/change_max_amount">
+  	<%= csrf_token_field %>
+  	<input type="text" name="max_amount_of_people" class="input-block-level"/>
 
-  <%= f.label t('event.new.form.max_amount_of_people') %>
-  <%= f.text_field :max_amount_of_people, :class => "input-block-level" %>
-  <%= f.submit "Grabar", :class => "btn btn-primary" %>
-  <%= link_to 'Cancelar', url_for(:event, :list), :class => "btn btn-secondary" %>
-<% end %>
+    <input type="submit" class="btn btn-primary" value="Grabar" id="BTCreateLargeShip">
+
+  </form>
+
+
 
 </div>

@@ -62,14 +62,14 @@ Tod::App.controllers :event do
     audience_level= params[:event][:audience_level]
     #max_amount_of_people= params[:event][:max_amount_of_people]
 
-    
+
     if (amount_of_people.to_i >= 1 && amount_of_people.to_i <= @event.max_amount_of_people)
 
       flash[:success] = t('event.new.edit.success')
     else
       flash[:danger] = t('event.detail.error.amount_of_people')
       redirect 'event/list'
-     end 
+     end
 
     @event = Event.get(params[:event_id])
     @event.update(params[:event])
@@ -106,4 +106,17 @@ Tod::App.controllers :event do
     end
   end
 
+  get :modify_amount do
+    render 'event/edit_amount'
+  end
+
+  post :change_max_amount do
+    @max_amount = params[:max_amount_of_people]
+    @events = Event.reverse
+    @events.each do |event|
+      event.max_amount_of_people = @max_amount
+      event.save
+    end
+    redirect 'event/list'
+  end
 end
